@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Starter Template - Materialize</title>
+
+  <!-- CSS -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="/static/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="/static/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body>
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text">KSEB Bill Prediction</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">Predict the electricity bill amount</h5>
+      </div>
+
+      <div class="row">
+        <form id="bill-form" class="col s12">
+          <div class="row">
+            <div class="input-field col s4">
+              <label for="microwave"><b>Microwave</b></label>
+              <br>
+              <input placeholder="Microwave value" name="Microwave" id="microwave" type="text" class="validate">
+            </div>
+            <div class="input-field col s4">
+              <label for="humidity"><b>Humidity</b></label>
+              <br>
+              <input id="humidity" name="Humidity" placeholder="Humidity %" type="text" class="validate">
+            </div>
+            <div class="input-field col s4">
+              <label for="windspeed"><b>Windspeed</b></label>
+              <br>
+              <input id="windspeed" name="Windspeed" placeholder="Windspeed" type="text" class="validate">
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s4">
+              <label for="home_office"><b>Home Office</b></label>
+              <br>
+              <input placeholder="Home Office value" name="HomeOffice" id="home_office" type="text" class="validate">
+            </div>
+            <div class="input-field col s4">
+              <label for="precipitation_intensity"><b>Precipitation Intensity</b></label>
+              <br>
+              <input id="precipitation_intensity" name="PrecipitationIntensity" placeholder="Precipitation Intensity" type="text" class="validate">
+            </div>
+            <div class="input-field col s4">
+              <label for="Fridge"><b>Fridge</b></label>
+              <br>
+              <input id="Fridge" name="Fridge" placeholder="Fridge" type="text" class="validate">
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s4">
+              <label for="Solar"><b>Solar</b></label>
+              <br>
+              <input id="Solar" name="Solar" placeholder="Solar" type="text" class="validate">
+            </div>
+            <div class="input-field col s4">
+              <label for="Living_room"><b>Living_room</b></label>
+              <br>
+              <input id="Living_room" name="Living_room" placeholder="Living_room" type="text" class="validate">
+            </div>
+            <div class="input-field col s4">
+              <label for="Temperature"><b>Temperature</b></label>
+              <br>
+              <input id="Temperature" name="Temperature" placeholder="Temperature" type="text" class="validate">
+            </div>
+          </div>
+          <div class="row center">
+            <button type="submit" class="btn-large waves-effect waves-light orange">Predict Bill Amount</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Result Modal -->
+  <div id="result-modal" class="modal">
+    <div class="modal-content">
+      <h4>Bill Amount Prediction</h4>
+      <p id="result"></p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+  </div>
+
+  <footer class="page-footer orange">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Company Bio</h5>
+          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full-time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Settings</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="/static/materialize.js"></script>
+  <script src="/static/init.js"></script>
+
+  <script>
+$(document).ready(function() {
+  // Initialize modal
+  $('.modal').modal();
+
+  // Handle form submission
+  $('#bill-form').submit(function(event) {
+    event.preventDefault(); // Prevent form from submitting
+
+    // Collect form data
+    var formData = $(this).serialize();
+
+    // Send AJAX request
+    $.ajax({
+      url: '/predict',
+      type: 'POST',
+      data: formData,
+      success: function(response) {
+        // Update modal content with the result
+        $('#result').text("The predicted bill is: " + response.result);
+        // Open the modal
+        $('#result-modal').modal('open');
+      },
+      error: function() {
+        alert('An error occurred. Please try again.');
+      }
+    });
+  });
+});
+
+  </script>
+</body>
+</html>
